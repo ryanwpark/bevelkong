@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+	--background: oklch(85.063% 0.08406 217.226);
+	--foreground: oklch(100% 0.00011 271.152);
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: monospace;
+	padding: 0rem 0rem 0rem;
+	margin: 0rem;
+}
