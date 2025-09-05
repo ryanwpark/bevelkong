@@ -87,7 +87,6 @@ export default function ContactForm() {
 					validateOnChange={false}
 					onSubmit={(values, { resetForm }) => {
 						setPendingSubmit(true);
-						alert(JSON.stringify(values));
 						setSubmitMessage('');
 						fetch(
 							'https://gmailsenderapi.onrender.com/send-email',

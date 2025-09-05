@@ -35,11 +35,11 @@ export default function ProjectCatalog({
 										onClick={() => setSelected(null)}>
 										<motion.div
 											initial={{
-												scale: 0.95,
+												scale: 0.5,
 												opacity: 0,
 											}}
 											animate={{ scale: 1, opacity: 1 }}
-											exit={{ scale: 0.95, opacity: 0 }}
+											exit={{ scale: 0.1, opacity: 1 }}
 											className='bg-white p-2 sm:p-4 rounded-lg shadow-lg w-[95vw] max-w-full sm:w-[90vw] sm:max-w-md'
 											onClick={(e) =>
 												e.stopPropagation()
