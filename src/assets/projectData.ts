@@ -96,7 +96,7 @@ export const SwiftProjects: ProjectDetails[] = [
 	},
 	{
 		id: 1,
-		title: 'BlackJack 21 Trainer',
+		title: 'Black Jack 21 Trainer',
 		tasks: [
 			'IOS App for simulating blackjack giving users the ability to practice basic strategy and card counting techniques.',
 			'Implemented a scoring system to track user performance and progress over time.',
@@ -113,7 +113,7 @@ export const SwiftProjects: ProjectDetails[] = [
 export const PythonProjects: ProjectDetails[] = [
 	{
 		id: 0,
-		title: 'Car Accident Predictor',
+		title: 'Car Accident Model',
 		tasks: [
 			'ETL pipeline for predicting the likelihood of an accident in NYC based on key predictors.',
 			'Preprocessed the dataset by handling missing values, encoding categorical variables, and normalizing numerical features to ensure readiness for modeling.',
