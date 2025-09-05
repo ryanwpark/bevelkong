@@ -14,9 +14,11 @@ interface ScriptSegment {
 const MessageTyping = ({
 	message = [
 		{ text: '' },
-		{ text: 'ASPIRING' },
-		{ text: 'ASPIRING WEB' },
-		{ text: 'ASPIRING WEB DEVELOPER', endDelay: 8 },
+		{ text: 'Web' },
+		{ text: 'Web Devle', endDelay: 0.4 },
+		{ text: 'Web Dev', endDelay: 0.4 },
+		{ text: 'Web Developer' },
+		{ text: 'Web Developer', endDelay: 8 },
 	],
 }: {
 	message?: ScriptSegment[];
@@ -32,20 +34,6 @@ const MessageTyping = ({
 	} = message[paragraphIndex];
 	const ref = useRef(null);
 	const inView = useInView(ref, { amount: 0.5, once: false });
-
-	// useEffect(() => {
-	// 	const timerId = setTimeout(() => {
-	// 		setShowMessage(false);
-	// 	}, 3000);
-	// 	return () => clearTimeout(timerId);
-	// }, []);
-
-	// useEffect(() => {
-	// 	setParagraphIndex(0);
-	// 	if (inView) {
-	// 		setShowMessage(true);
-	// 	}
-	// }, [inView]);
 	useEffect(() => {
 		setParagraphIndex(0);
 		if (inView && !showMessage) {
@@ -61,7 +49,7 @@ const MessageTyping = ({
 	return (
 		<div
 			ref={ref}
-			className='message flex flex-col justify-center pl-8 relative items-center text-2xl font-semi-bold'>
+			className='message flex flex-col justify-center items-center text-2xl font-semi-bold'>
 			{showMessage && (
 				<Typewriter
 					as='p'

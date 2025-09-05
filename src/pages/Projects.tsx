@@ -5,80 +5,28 @@ import {
 	JavaProjects,
 	SwiftProjects,
 } from '../assets/projectData';
-import * as motion from 'motion/react-client';
+import FloatingLabel from '../components/Projects/FloatingLabel';
 
 const Projects = () => {
 	return (
-		<div className='flex justify-center items-center md:pt-25 sm:pt-10 h-screen w-screen'>
-			<div className='bg-[oklch(85.063%_0.08406_217.226)] w-[95vw] h-[80vh] flex items-center justify-center'>
-				<div className='grid grid-cols-2 grid-rows-2 w-full h-full place-items-center'>
-					<span>
-						{/* animation for ↓Projects↓ */}
-						<motion.div
-							initial={{ y: 0 }}
-							animate={{ y: 30 }}
-							transition={{
-								repeat: Infinity,
-								repeatType: 'reverse',
-								duration: 2,
-								ease: 'easeInOut',
-							}}>
-							<h1 className='text-center text-yellow-500 text-bold md:text-6xl text-4xl'>
-								↓React↓
-							</h1>
-						</motion.div>
-						<ProjectCatalog projects={ReactProjects} />
-					</span>
-					<span>
-						<motion.div
-							initial={{ y: 0 }}
-							animate={{ y: 20 }}
-							transition={{
-								repeat: Infinity,
-								repeatType: 'reverse',
-								duration: 2,
-								ease: 'easeInOut',
-							}}>
-							<h1 className='text-center text-yellow-500 text-bold md:text-6xl text-4xl'>
-								↓Java↓
-							</h1>
-						</motion.div>
-						<ProjectCatalog projects={JavaProjects} />
-					</span>
-					<span>
-						<motion.div
-							initial={{ y: 0 }}
-							animate={{ y: 30 }}
-							transition={{
-								repeat: Infinity,
-								repeatType: 'reverse',
-								duration: 2,
-								ease: 'easeInOut',
-							}}>
-							<h1 className='text-center text-yellow-500 text-bold md:text-6xl text-4xl'>
-								↓Python↓
-							</h1>
-						</motion.div>
-						<ProjectCatalog projects={PythonProjects} />
-					</span>
-					<span>
-						<motion.div
-							initial={{ y: 0 }}
-							animate={{ y: 30 }}
-							transition={{
-								repeat: Infinity,
-								repeatType: 'reverse',
-								duration: 2,
-								ease: 'easeInOut',
-							}}>
-							<h1 className='text-center text-yellow-500 text-bold md:text-6xl text-4xl'>
-								↓Swift↓
-							</h1>
-						</motion.div>
-						<ProjectCatalog projects={SwiftProjects} />
-					</span>
-				</div>
-			</div>
+		<div className='bg-[oklch(85.063%_0.08406_217.226)] grid grid-cols-2 grid-rows-2 gap-1 min-h-screen w-screen flex justify-center items-center'>
+			<span className='items-end'>
+				{/* animation for ↓Projects↓ */}
+				<FloatingLabel label='React' />
+				<ProjectCatalog projects={ReactProjects} />
+			</span>
+			<span>
+				<FloatingLabel label='Java' />
+				<ProjectCatalog projects={JavaProjects} />
+			</span>
+			<span>
+				<FloatingLabel label='Python' />
+				<ProjectCatalog projects={PythonProjects} />
+			</span>
+			<span>
+				<FloatingLabel label='Swift' />
+				<ProjectCatalog projects={SwiftProjects} />
+			</span>
 		</div>
 	);
 };
