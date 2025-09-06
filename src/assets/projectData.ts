@@ -8,6 +8,7 @@ export type ProjectDetails = {
 	company: string;
 	location: string;
 	language: string;
+	link?: string;
 };
 
 export const ReactProjects: ProjectDetails[] = [
@@ -15,6 +16,7 @@ export const ReactProjects: ProjectDetails[] = [
 		id: 0,
 		language: 'React',
 		title: 'Fuel Vendor App',
+		link: 'https://github.com/jaykeburger/cosc4353-gp',
 		tasks: [
 			'Web application for fuel vendors and clients to manage and order through an intuitive interface.',
 			"Calculated fuel prices based on distance, quantity, and delivery options based on clients' needs.",
@@ -41,6 +43,7 @@ export const ReactProjects: ProjectDetails[] = [
 		id: 1,
 		language: 'React',
 		title: 'Medical Clinic App',
+		link: 'https://github.com/ryanwpark/fullstack',
 		tasks: [
 			'Web application for medical clinics and patients to manage appointments, medical records, and billing information.',
 			'Implemented dynamic data reporting with customizable filters for staff to easily access and sort patient and appointment records.',
@@ -68,6 +71,7 @@ export const JavaProjects: ProjectDetails[] = [
 	{
 		id: 0,
 		title: 'Midas API',
+		link: 'https://github.com/ryanwpark/forage-midas',
 		language: 'Java',
 		tasks: [
 			"Integrated Apache Kafka with Spring Boot application for communicating with JPMorgan Chase's data services.",
@@ -98,6 +102,7 @@ export const SwiftProjects: ProjectDetails[] = [
 		technologies: ['Swift', 'SFSymbols', 'SQLite', 'GRDB', 'UIKit'],
 		company: 'Personal',
 		location: 'Katy, TX',
+		link: 'https://github.com/ryanwpark/KilterboardController',
 	},
 	{
 		id: 1,
@@ -113,6 +118,7 @@ export const SwiftProjects: ProjectDetails[] = [
 		technologies: ['Swift', 'SFSymbols', 'SQLite', 'GRDB', 'UIKit'],
 		company: 'Personal',
 		location: 'Katy, TX',
+		link: 'https://github.com/ryanwpark/blackjack-trainer',
 	},
 ];
 
@@ -144,6 +150,7 @@ export const PythonProjects: ProjectDetails[] = [
 		id: 1,
 		language: 'Python',
 		title: 'Drone Facial Ranking',
+		link: 'https://docs.google.com/presentation/d/14vY0Kmmei6PHOiuNrYzOEFmWJRswdgq_BUgc0MQcTJw/edit?usp=drive_link',
 		tasks: [
 			'Pipeline Design & Implementation: Developed a facial recognition system to improve recognition at extreme angles and long distances, integrating StyleGAN3 for image frontalization with AdaFace for quality-adaptive margin loss.',
 			'Benchmarking & Evaluation: Conducted literature review and compared against SOTA methods (ArcFace, CurricularFace, PFE, URL) to assess strengths and limitations; applied the DroneFace dataset (1,364 images, 11 subjects) with 5-fold cross-validation.',

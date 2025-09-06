@@ -1,14 +1,55 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
+import AboutMe from './pages/AboutMe';
+import Projects from './pages//Projects';
+import ContactPage from './pages/ContactPage';
+import NavBar from './components/NavBar/Navbar';
+import { useRef } from 'react';
+import { useInView } from 'motion/react';
+import { useEffect, useState } from 'react';
+import Links from './components/NavBar/Links';
 
-const App: React.FC = () => {
+const App = () => {
+	const aboutRef = useRef(null);
+	const projectRef = useRef(null);
+	const contactRef = useRef(null);
+
+	const aboutInView = useInView(aboutRef, { amount: 0.5, once: false });
+	const projectInView = useInView(projectRef, { amount: 0.5, once: false });
+	const contactInView = useInView(contactRef, { amount: 0.5, once: false });
+	const [activeIndex, setActiveIndex] = useState(0);
+
+	useEffect(() => {
+		if (aboutInView) {
+			setActiveIndex(0);
+		} else if (projectInView) {
+			setActiveIndex(1);
+		} else if (contactInView) {
+			setActiveIndex(2);
+		}
+	}, [aboutInView, projectInView, contactInView, activeIndex]);
+
 	return (
-		<Router>
-			<Routes>
-				<Route path='/' element={<LandingPage />} />
-			</Routes>
-		</Router>
+		<div className='snap-y snap-mandatory overflow-y-scroll h-dvh flex flex-col no-scrollbar'>
+			<NavBar activeIndex={activeIndex} />
+			<Links />
+			<section
+				id='about me'
+				ref={aboutRef}
+				className='flex h-dvh snap-start'>
+				<AboutMe />
+			</section>
+			<section
+				id='project'
+				ref={projectRef}
+				className='flex h-dvh snap-start'>
+				<Projects />
+			</section>
+			<section
+				id='contact'
+				ref={contactRef}
+				className='flex h-dvh snap-start'>
+				<ContactPage />
+			</section>
+		</div>
 	);
 };
 
