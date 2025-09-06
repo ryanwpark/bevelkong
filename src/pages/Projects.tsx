@@ -9,7 +9,7 @@ import FloatingLabel from "../components/Projects/FloatingLabel";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen w-screen bg-[oklch(85.063%_0.08406_217.226)] flex flex-col">
+    <div className="min-h-dvh w-screen bg-[oklch(85.063%_0.08406_217.226)] flex flex-col">
       <div className="flex h-1/2 items-end lg:relative lg:top-15 md:space-x-40 justify-center">
         <span className="">
           <FloatingLabel label="React" />
