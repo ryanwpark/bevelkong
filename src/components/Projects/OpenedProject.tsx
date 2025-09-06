@@ -18,7 +18,7 @@ export default function OpenedProject({
 		// or window.dispatchEvent(escapeEvent);
 	}
 	return (
-		<div className='w-full'>
+		<div className='w-full p-4' onClick={() => simulateEscapeKey()}>
 			<span className='flex flex-row'>
 				<img
 					onClick={() => simulateEscapeKey()}
