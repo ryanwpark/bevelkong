@@ -7,11 +7,13 @@ export type ProjectDetails = {
 	technologies: string[];
 	company: string;
 	location: string;
+	language: string;
 };
 
 export const ReactProjects: ProjectDetails[] = [
 	{
 		id: 0,
+		language: 'React',
 		title: 'Fuel Vendor App',
 		tasks: [
 			'Web application for fuel vendors and clients to manage and order through an intuitive interface.',
@@ -37,6 +39,7 @@ export const ReactProjects: ProjectDetails[] = [
 	},
 	{
 		id: 1,
+		language: 'React',
 		title: 'Medical Clinic App',
 		tasks: [
 			'Web application for medical clinics and patients to manage appointments, medical records, and billing information.',
@@ -65,6 +68,7 @@ export const JavaProjects: ProjectDetails[] = [
 	{
 		id: 0,
 		title: 'Midas API',
+		language: 'Java',
 		tasks: [
 			"Integrated Apache Kafka with Spring Boot application for communicating with JPMorgan Chase's data services.",
 			'Ensured account balances were updated correctly in development with an H2 in-memory database.',
@@ -83,6 +87,7 @@ export const SwiftProjects: ProjectDetails[] = [
 	{
 		id: 0,
 		title: 'Kilter Board App',
+		language: 'Swift',
 		tasks: [
 			'Revamping a rock climbing mobile application with the goal of offering an enhanced user experience with less navigation.',
 			'Integrated Bluetooth connectivity for communication with the climbing board.',
@@ -97,6 +102,7 @@ export const SwiftProjects: ProjectDetails[] = [
 	{
 		id: 1,
 		title: 'Black Jack 21 Trainer',
+		language: 'Swift',
 		tasks: [
 			'IOS App for simulating blackjack giving users the ability to practice basic strategy and card counting techniques.',
 			'Implemented a scoring system to track user performance and progress over time.',
@@ -113,7 +119,8 @@ export const SwiftProjects: ProjectDetails[] = [
 export const PythonProjects: ProjectDetails[] = [
 	{
 		id: 0,
-		title: 'Car Accident Model',
+		language: 'Python',
+		title: 'Car Accident Study',
 		tasks: [
 			'ETL & Data Preprocessing: Built a pipeline to predict accident likelihood in NYC, handling missing values, encoding categorical variables, and normalizing numerical features.',
 			'Modeling & Evaluation: Trained Logistic Regression, Random Forest, and Gradient Boosting models; compared performance using accuracy, precision, recall, F1-score, and ROC–AUC.',
@@ -135,7 +142,8 @@ export const PythonProjects: ProjectDetails[] = [
 	},
 	{
 		id: 1,
-		title: 'Facial Ranking Model',
+		language: 'Python',
+		title: 'Drone Facial Ranking',
 		tasks: [
 			'Pipeline Design & Implementation: Developed a facial recognition system to improve recognition at extreme angles and long distances, integrating StyleGAN3 for image frontalization with AdaFace for quality-adaptive margin loss.',
 			'Benchmarking & Evaluation: Conducted literature review and compared against SOTA methods (ArcFace, CurricularFace, PFE, URL) to assess strengths and limitations; applied the DroneFace dataset (1,364 images, 11 subjects) with 5-fold cross-validation.',

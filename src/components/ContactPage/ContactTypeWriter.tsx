@@ -28,7 +28,7 @@ export default function ContactTypeWriter({
 	});
 
 	return (
-		<div className='text-center px-4 py-0 flex items-center justify-center'>
+		<div className='text-center px-4 py-0 flex items-center justify-center will-change-transform'>
 			<Typewriter
 				as='div'
 				cursorStyle={getCursorStyle()}

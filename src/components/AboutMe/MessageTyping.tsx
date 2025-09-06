@@ -49,7 +49,7 @@ const MessageTyping = ({
 	return (
 		<div
 			ref={ref}
-			className='message flex flex-col justify-center items-center text-2xl font-semi-bold'>
+			className='message flex flex-col justify-center items-center text-2xl font-semi-bold will-change-transform'>
 			{showMessage && (
 				<Typewriter
 					as='p'

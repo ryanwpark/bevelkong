@@ -20,23 +20,33 @@ function NavBarItem({
 	isHighlighted: boolean;
 }) {
 	return (
-		<motion.li
-			className={`text-4xl leading-[0.4] text-black capitalize ${
-				isHighlighted ? 'font-bold' : 'font-semi-bold'
-			}`}
-			initial={false}
-			animate={{
-				opacity: isHighlighted ? 1 : 0.2,
-				scale: isHighlighted ? 1 : 0.9,
-			}}
-			transition={{
-				duration: 0.1,
-				ease: 'linear',
+		<div
+			onClick={() => {
+				const element = document.getElementById(page.title);
+				if (element) {
+					element.scrollIntoView();
+				} else {
+					window.scrollTo(0, 0);
+				}
 			}}>
-			<span className={`${isHighlighted ? 'text-yellow-500' : ''}`}>
-				{page.title}
-			</span>
-		</motion.li>
+			<motion.li
+				className={`text-4xl leading-[0.4] text-black capitalize ${
+					isHighlighted ? 'font-bold' : 'font-semi-bold'
+				}`}
+				initial={false}
+				animate={{
+					opacity: isHighlighted ? 1 : 0.2,
+					scale: isHighlighted ? 1 : 0.9,
+				}}
+				transition={{
+					duration: 0.1,
+					ease: 'linear',
+				}}>
+				<span className={`${isHighlighted ? 'text-yellow-500' : ''}`}>
+					{page.title}
+				</span>
+			</motion.li>
+		</div>
 	);
 }
 

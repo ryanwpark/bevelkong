@@ -13,7 +13,7 @@ export default function ProjectCatalog({
 	useEscToClose(selected !== null, () => setSelected(null));
 
 	return (
-		<div className='flex justify-center items-center h-1/2 w-auto'>
+		<div className='flex justify-center items-center h-1/2 w-auto will-change-0'>
 			<div className='bg-[oklch(85.063% 0.08406 217.226)] flex items-center p-8 rounded-xl w-full max-w-full'>
 				<div className='grid grid-cols-2 grid-rows-2 gap-8 lg:gap-12 w-full h-[20vw]'>
 					{projects.map((project, i) => (

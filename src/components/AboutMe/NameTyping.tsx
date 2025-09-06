@@ -39,7 +39,7 @@ const NameTyping = ({
 		<div
 			ref={ref}
 			id='full-name'
-			className='flex flex-col sm:h-[200px] justify-center items-center text-center md:text-8xl sm:text-6xl font-bold'>
+			className='flex flex-col sm:h-[200px] justify-center items-center text-center md:text-8xl sm:text-6xl font-bold will-change-transform'>
 			<Typewriter
 				as='p'
 				speed='slow'
@@ -47,7 +47,7 @@ const NameTyping = ({
 				textStyle={monospace}
 				backspace={backspace}
 				backspaceFactor={backspaceFactor}
-				className={`${textcolor}`}
+				className={`text ${textcolor}`}
 				onComplete={() => {
 					delay(() => {
 						setParagraphIndex(
